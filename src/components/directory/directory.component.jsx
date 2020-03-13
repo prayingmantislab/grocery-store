@@ -1,54 +1,59 @@
 import React from 'react';
 
-import MenuItem from '../menu-item/menu-item.component'
+import MenuItem from '../menu-item/menu-item.component.jsx';
 
 import './directory.styles.scss';
+
 class Directory extends React.Component {
     constructor() {
         super();
 
         this.state = {
-            sections:
-            [{
-                title:'חמוצים',
-                imageUrl: 'https://images.unsplash.com/photo-1582536446621-17e0235b514a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+            setions: [{
+                title: 'hats',
+                imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
                 id: 1,
-                linkUrl: 'pickles'
-            },
-            {   title: 'פיצוחים',
-                imageUrl: 'https://images.unsplash.com/photo-1582173649515-0f9582d58e60?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=769&q=80',
+                linkUrl: 'hats'
+              },
+              {
+                title: 'jackets',
+                imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
                 id: 2,
                 linkUrl: ''
-            },
-            {
-                title: 'שמן זית',
-                imageUrl:'https://images.unsplash.com/photo-1552592074-ea7a91b851b3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80',
+              },
+              {
+                title: 'sneakers',
+                imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
                 id: 3,
                 linkUrl: ''
-            }, 
-            {
-                title:'פירות',
-                imageUrl:'https://images.unsplash.com/photo-1511546865855-fe4788edf4b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+              },
+              {
+                title: 'womens',
+                imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
                 size: 'large',
                 id: 4,
                 linkUrl: ''
-            },
-            {   title:'ירקות',
-                imageUrl:'https://images.unsplash.com/photo-1557844352-761f2565b576?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+              },
+              {
+                title: 'mens',
+                imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
                 size: 'large',
                 id: 5,
                 linkUrl: ''
-            }]
+              }]
         }
     }
+
     render() {
         return (
             <div className='directory-menu'>
-                {this.state.sections.map(({id,...otherSectionProps }) => (
-                    <MenuItem key={id} {...otherSectionProps} />
-                    ))}
-                </div>
+                {this.state.sections.map(({id, ...otherSectionProps }) => (
+                    < MenuItem key={id} {...otherSectionProps} />
+                ))}
+            </div>
         );
     }
+
 }
+
 export default Directory;
