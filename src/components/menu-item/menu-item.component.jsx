@@ -14,6 +14,7 @@ const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => (
                 backgroundImage: `url(${imageUrl})`
             }}
         />
+        {/* why in line 16 there is  a self closing tag*/}
         <div className='content'>
             <h1 className='title'>{title.toUpperCase()}</h1>
             <span className='subtitle'>SHOP NOW</span>
